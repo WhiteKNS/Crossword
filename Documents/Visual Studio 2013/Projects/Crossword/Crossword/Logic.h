@@ -4,6 +4,8 @@
 #include <vector>
 #include "DB.h"
 #include <Windows.h>
+#include "Painter.h"
+#include <algorithm>
 
 using namespace std;
 
@@ -15,26 +17,22 @@ class Logic
 	vector<string> words;
 	vector<string> questions;
 	vector<int> arrows;
-	vector<int> Flag;
+	vector<bool> Flag;
 	unsigned int counter;
 	string checkword;
+	Painter *painter;
+	DataBase *base;
 
 	string Input();
 
-	void gotoXY(int column, int line);
-	void InitialHorizontal(const string word,const int column1,const int line1);
-	void InitialVertical(const string word,const int column1,const int line1);
-
-	void PrintMatrix();
-	void PrintChar();
-	void Print();
 
 public:
 
 	Logic();
 	~Logic();
 	bool InitLevel(const int level);
-	void Game();
+	bool Game();
+	const int getLevels();
 };
 
 #endif

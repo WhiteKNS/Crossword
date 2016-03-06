@@ -13,23 +13,32 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="DB">
+      <UniqueIdentifier>{382eadba-381a-484a-9e11-bb693f8262ca}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Crossword.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="DB.cpp">
+    <ClCompile Include="Logic.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Logic.cpp">
+    <ClCompile Include="DB.cpp">
+      <Filter>DB</Filter>
+    </ClCompile>
+    <ClCompile Include="Painter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="DB.h">
+    <ClInclude Include="Logic.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Logic.h">
+    <ClInclude Include="DB.h">
+      <Filter>DB</Filter>
+    </ClInclude>
+    <ClInclude Include="Painter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

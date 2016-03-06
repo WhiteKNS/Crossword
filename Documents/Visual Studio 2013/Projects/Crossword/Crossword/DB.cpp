@@ -22,11 +22,12 @@ DataBase::DataBase()
 		vec[i].reserve(5);
 		arrows[i].reserve(5);
 	}
-		
-
 }
 
-DataBase::~DataBase(){}
+	DataBase::~DataBase()
+	{
+	delete instance;
+	}
 
 	const vector<int> DataBase::getCrossword(const int level)
 	{
@@ -46,28 +47,14 @@ DataBase::~DataBase(){}
 				for (unsigned int j = start; j < i; j++)
 				{
 					final += current_str.at(j);
-					//if (j + 1 == current_str.length() - 1) final += current_str.at(++j);
-					
 				}
 				int number = atoi(final.c_str());
 				vec[vec.size() - 1].push_back(number);
-
 				start = i+1;
 			}
 		}
 	}
 
-	void DataBase::PrintVector()
-	{
-		for (unsigned int i = 0; i < vec.size(); ++i)
-		{
-			for (unsigned int j = 0; j < vec.at(i).size(); ++j)
-			{
-				cout << vec.at(i).at(j) << " ";
-			}
-		}
-		cout << "\n" << endl;
-	}
 	void DataBase::setVector()
 	{
 		fin.open("test.txt");
@@ -146,21 +133,7 @@ DataBase::~DataBase(){}
 	}
 
 
-	void DataBase::PrintWords()
-	{
-		for (unsigned int i = 0; i < words.size(); ++i)
-		{
-			for (unsigned int j = 0; j < words.at(i).size(); ++j)
-			{
-				cout << words.at(i).at(j) << " ";
-			}
-		}
 	
-		cout << "\n" << endl;
-	}
-
-
-
 	void DataBase::setQuestions()
 	{
 		fstream f_str;
@@ -172,7 +145,6 @@ DataBase::~DataBase(){}
 		}
 		else
 		{
-			//cout << "opened questions " << endl;
 			while (!f_str.eof())
 			{
 				
@@ -198,6 +170,10 @@ DataBase::~DataBase(){}
 		return arrows.at(level);
 	}
 	
+	const int DataBase::getNumberOfLevels()
+	{
+		return arrows.size();
+	}
 
 	const vector<string> DataBase::getQuestions(const int level)
 	{
@@ -205,32 +181,7 @@ DataBase::~DataBase(){}
 	}
 
 
-	void DataBase::PrintQuestions()
-	{
-		for (unsigned int i = 0; i < words.size(); ++i, cout<<"\n")
-		{
-			for (unsigned int j = 0; j < questions.at(i).size(); ++j)
-			{
-				cout << questions.at(i).at(j) << "\n";
-			}
-		}
-
-		cout << "\n" << endl;
-	}
-
-	void DataBase::PrintArrows()
-	{
-
-		for (unsigned int i = 0; i < arrows.size(); ++i, cout << "\n")
-		{
-			for (unsigned int j = 0; j < arrows.at(i).size(); ++j)
-			{
-				cout << arrows.at(i).at(j) << "\n";
-			}
-		}
-
-		cout << "\n" << endl;
-	}
+	
 	void DataBase::setArrows()
 	{
 		fstream f;
@@ -246,7 +197,6 @@ DataBase::~DataBase(){}
 			{
 				getline(f, current_str, '\n'); //получаем crossword из файла1
 				if (current_str.empty()) { break; }
-			//	cout << current_str;
 				arrows.push_back(vector<int>());
 				SaveToArrow(current_str);
 			}
@@ -285,3 +235,59 @@ DataBase::~DataBase(){}
 		}
 	
 	}
+
+
+	/*
+	void DataBase::PrintVector()
+	{
+		for (unsigned int i = 0; i < vec.size(); ++i)
+		{
+			for (unsigned int j = 0; j < vec.at(i).size(); ++j)
+			{
+				cout << vec.at(i).at(j) << " ";
+			}
+		}
+		cout << "\n" << endl;
+	}
+
+	void DataBase::PrintArrows()
+	{
+
+		for (unsigned int i = 0; i < arrows.size(); ++i, cout << "\n")
+		{
+			for (unsigned int j = 0; j < arrows.at(i).size(); ++j)
+			{
+				cout << arrows.at(i).at(j) << "\n";
+			}
+		}
+
+		cout << "\n" << endl;
+	}
+
+	void DataBase::PrintQuestions()
+	{
+	for (unsigned int i = 0; i < words.size(); ++i, cout<<"\n")
+	{
+	for (unsigned int j = 0; j < questions.at(i).size(); ++j)
+	{
+	cout << questions.at(i).at(j) << "\n";
+	}
+	}
+
+	cout << "\n" << endl;
+	}
+
+	void DataBase::PrintWords()
+	{
+	for (unsigned int i = 0; i < words.size(); ++i)
+	{
+	for (unsigned int j = 0; j < words.at(i).size(); ++j)
+	{
+	cout << words.at(i).at(j) << " ";
+	}
+	}
+
+	cout << "\n" << endl;
+	}
+
+	*/

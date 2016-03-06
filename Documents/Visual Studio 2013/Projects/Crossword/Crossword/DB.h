@@ -43,16 +43,17 @@ public:
 	const vector<int> getCrossword(const int level);
 	const vector<string> getWords(const int level);
 	const vector<string> getQuestions(const int level);
+	const int getNumberOfLevels();
 
 	void setVector();
 	void setWords();
 	void setQuestions();
 	void setArrows();
 
-	void PrintArrows();
-	void PrintWords();
-	void PrintQuestions();
-	void PrintVector();
+	//void PrintArrows();
+	//void PrintWords();
+	//void PrintQuestions();
+	//void PrintVector();
 	
 };
 

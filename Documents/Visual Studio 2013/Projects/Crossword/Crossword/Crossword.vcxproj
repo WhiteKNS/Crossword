@@ -79,10 +79,12 @@
     <ClCompile Include="Crossword.cpp" />
     <ClCompile Include="DB.cpp" />
     <ClCompile Include="Logic.cpp" />
+    <ClCompile Include="Painter.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DB.h" />
     <ClInclude Include="Logic.h" />
+    <ClInclude Include="Painter.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="Debug\test.txt" />

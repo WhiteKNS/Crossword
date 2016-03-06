@@ -1,9 +1,19 @@
-﻿Build started 3/6/2016 10:56:47 AM.
+﻿Build started 3/6/2016 2:47:17 PM.
      1>Project "C:\Users\NATALYA\Documents\Visual Studio 2013\Projects\Crossword\Crossword\Crossword.vcxproj" on node 2 (Build target(s)).
-     1>Link:
+     1>ClCompile:
+         C:\Program Files\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Crossword.cpp DB.cpp Logic.cpp
+         Logic.cpp
+         DB.cpp
+         Crossword.cpp
+         Generating Code...
+       Link:
+         C:\Program Files\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\NATALYA\Documents\Visual Studio 2013\Projects\Crossword\Debug\Crossword.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\NATALYA\Documents\Visual Studio 2013\Projects\Crossword\Debug\Crossword.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\NATALYA\Documents\Visual Studio 2013\Projects\Crossword\Debug\Crossword.lib" /MACHINE:X86 Debug\Crossword.obj
+         Debug\DB.obj
+         Debug\Logic.obj
+         Debug\Painter.obj
          Crossword.vcxproj -> C:\Users\NATALYA\Documents\Visual Studio 2013\Projects\Crossword\Debug\Crossword.exe
      1>Done Building Project "C:\Users\NATALYA\Documents\Visual Studio 2013\Projects\Crossword\Crossword\Crossword.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.09
+Time Elapsed 00:00:05.70
