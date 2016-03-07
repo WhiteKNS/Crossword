@@ -43,12 +43,12 @@ DataBase::DataBase()
 		{
 			if (current_str.at(i) == ' '||i+1==current_str.length())
 			{
-				string final = "";
+				string final_str = "";
 				for (unsigned int j = start; j < i; j++)
 				{
-					final += current_str.at(j);
+					final_str += current_str.at(j);
 				}
-				int number = atoi(final.c_str());
+				int number = atoi(final_str.c_str());
 				vec[vec.size() - 1].push_back(number);
 				start = i+1;
 			}
@@ -114,13 +114,13 @@ DataBase::DataBase()
 		{
 			if (current_str.at(i) == ' '||(i+1)==current_str.length())
 			{
-				string final = "";
+				string final_str = "";
 				for (unsigned int j = start; j < i; j++)
 				{
-					final += current_str.at(j);
-					if (j + 1 == current_str.length() - 1) final += current_str.at(++j);
+					final_str += current_str.at(j);
+					if (j + 1 == current_str.length() - 1) final_str += current_str.at(++j);
 				}
-				words[words.size() - 1].push_back(final);
+				words[words.size() - 1].push_back(final_str);
 				start = i + 1;
 			}
 		}
@@ -215,19 +215,19 @@ DataBase::DataBase()
 		{
 			if (current_str.at(i) == ' ' || i + 1 == current_str.length())
 			{
-				string final = "";
+				string final_str = "";
 				if (i + 1 == current_str.length())
 				{
-					final = current_str.at(current_str.length() - 1);
+					final_str = current_str.at(current_str.length() - 1);
 				}
 				else {
 					for (unsigned int j = start; j < i; j++)
 					{
-						final += current_str.at(j);
+						final_str += current_str.at(j);
 
 					}
 				}
-				int number = atoi(final.c_str());
+				int number = atoi(final_str.c_str());
 				arrows.back().push_back(number);
 
 				start = i + 1;
