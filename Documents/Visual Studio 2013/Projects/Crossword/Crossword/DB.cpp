@@ -36,7 +36,6 @@ DataBase::DataBase()
 
 	void DataBase::SaveToField(const string current_str)
 	{
-		char delimiter = ' ';
 		int start = 0;
 		
 		for (unsigned int i = 0; i < current_str.length(); ++i)
@@ -107,7 +106,6 @@ DataBase::DataBase()
 
 	void DataBase::SaveToString(const string current_str)
 	{
-		char delimiter = ' ';
 		int start = 0;
 
 		for (unsigned int i = 0; i < current_str.length(); ++i)
@@ -208,7 +206,6 @@ DataBase::DataBase()
 
 	void DataBase::SaveToArrow(const string current_str)
 	{
-		char delimiter = ' ';
 		int start = 0;
 
 		for (unsigned int i = 0; i < current_str.length(); ++i)
