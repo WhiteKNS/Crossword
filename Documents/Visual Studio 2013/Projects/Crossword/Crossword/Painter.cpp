@@ -15,24 +15,19 @@ Painter::Painter(int **matrix,unsigned int words_size) //constructor
 }
 
 void Painter::PaintHorizontal(string word, int line1, int column1){
-	int i, j;
-	int k = word.size();
-	for (i = line1, j = 0; i <(line1 + k); i++, j++){
+	for (unsigned int i = line1, j = 0; i <(line1 + word.size()); i++, j++){
 		CharField[i][column1] = word.at(j);
 	}
 }
 
 void Painter::PaintVertical(string word, int line1, int column1){
-	int i, j;
-	int k = word.size();
-	for (i = column1, j = 0; i < (column1 + k); i++, j++){
+	for (unsigned int i = column1, j = 0; i < (column1 + word.size()); i++, j++){
 		CharField[line1][i] = word.at(j);
 	}
 }
 
 void Painter::Print(){
-	int line2, column2;// Print console
-	line2 = 2; column2 = 35;
+	int line2=2, column2=35;// Print console
 	gotoXY(column2, line2);
 	for (int i = 0; i < LINES; i++, cout << "\n", line2++, gotoXY(column2, line2)){
 		for (int j = 0; j < COLUMNS; j++){

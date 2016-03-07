@@ -24,7 +24,7 @@ const int Logic::getLevels()
 string Logic::Input(){                                      // User input answer!
 	cout << "Input your answer!" << endl;
 	cin >> checkword;
-	std::transform(checkword.begin(), checkword.end(), checkword.begin(), tolower);
+	transform(checkword.begin(), checkword.end(), checkword.begin(), tolower);
 	return checkword;
 }
 

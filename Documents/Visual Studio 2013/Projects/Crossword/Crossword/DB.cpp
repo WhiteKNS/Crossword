@@ -150,7 +150,7 @@ DataBase::DataBase()
 				
 				getline(f_str, current_str, '\n'); //получаем questions из файла1
 				const char* cur = current_str.c_str();
-				if (std::isdigit(current_str[0]))
+				if (isdigit(current_str[0]))
 				{
 					questions.push_back(vector<string>());
 					continue;
