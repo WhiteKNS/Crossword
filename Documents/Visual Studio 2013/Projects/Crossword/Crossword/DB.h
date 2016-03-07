@@ -32,7 +32,7 @@ private:
 	void SetToArrows(string current_str);
 	void SaveToString(string current_str);
 	void SaveToArrow(const string current_str);
-	void SaveToVector(const string current_str);
+	void SaveToField(const string current_str);
 	void SaveToQuestions(const string current_str);
 
 public:
@@ -45,7 +45,7 @@ public:
 	const vector<string> getQuestions(const int level);
 	const int getNumberOfLevels();
 
-	void setVector();
+	void setField();
 	void setWords();
 	void setQuestions();
 	void setArrows();

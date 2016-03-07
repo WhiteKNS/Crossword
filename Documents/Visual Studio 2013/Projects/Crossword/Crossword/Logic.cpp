@@ -9,7 +9,7 @@ Logic::Logic() : counter(0), base(DataBase::getInstance())
 		matrix[i] = new int[COLUMNS];
 	}
 
-	base->setVector();
+	base->setField();
 	base->setWords();
 	base->setQuestions();
 	base->setArrows();

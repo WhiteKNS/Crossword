@@ -34,7 +34,7 @@ DataBase::DataBase()
 		return vec.at(level);
 	}
 
-	void DataBase::SaveToVector(const string current_str)
+	void DataBase::SaveToField(const string current_str)
 	{
 		char delimiter = ' ';
 		int start = 0;
@@ -55,7 +55,7 @@ DataBase::DataBase()
 		}
 	}
 
-	void DataBase::setVector()
+	void DataBase::setField()
 	{
 		fin.open("test.txt");
 		string current_str;
@@ -70,7 +70,7 @@ DataBase::DataBase()
 				getline(fin, current_str, '\n'); //получаем crossword из файла1
 				if (current_str.empty()) { break; }
 				vec.push_back(vector<int>());
-				SaveToVector(current_str);
+				SaveToField(current_str);
 			}
 			
 		}
