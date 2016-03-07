@@ -1,0 +1,26 @@
+arrows.txt
+help program understand, how we'll initialize words in crossword - vertical or horizontal:
+1 - horizontal
+0 - word will be initialize vertical
+
+
+questions.txt
+questions in crossword - the number means the number of the level
+
+test.txt
+matrix presentation of crossword
+0 - empty
+1 - full with words
+2 etc. - number of question +1
+
+words.txt
+right answers
+
+
+Crossword.cpp - main class with main function
+
+DB - data base, where all information is store
+
+Logic - logic of the game
+
+Painter - here crossword'll paint. 
