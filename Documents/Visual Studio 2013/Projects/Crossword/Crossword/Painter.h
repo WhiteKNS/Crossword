@@ -7,7 +7,7 @@
 
 using namespace std;
 
-class Painter
+class Painter //this class 'll paint crossword
 {
 	string CharField[LINES][COLUMNS];
 	Painter();

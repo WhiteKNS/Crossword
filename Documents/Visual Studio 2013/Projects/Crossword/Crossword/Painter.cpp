@@ -1,7 +1,7 @@
 #include "Painter.h"
 
 
-Painter::Painter(int **matrix,unsigned int words_size)
+Painter::Painter(int **matrix,unsigned int words_size) //constructor
 {
 	for (int i = 0; i < LINES; i++){
 		for (int j = 0; j < COLUMNS; j++){
