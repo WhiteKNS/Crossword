@@ -31,8 +31,8 @@ private:
 	vector<vector<int>> arrows; //info about how we'll print the words(vertical or horizontal)
 	static DataBase* instance; //here instance store
 
-	void SetToArrows(string current_str); //store to crossword
-	void SaveToString(string current_str);
+	//void SetToArrows(string current_str); 
+	void SaveToString(const string current_str);//store to crossword
 	void SaveToArrow(const string current_str);
 	void SaveToField(const string current_str);
 	void SaveToQuestions(const string current_str);
