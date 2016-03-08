@@ -9,6 +9,9 @@
 
 using namespace std;
 
+enum INITIALIZER{HOR_DOWN=0, VERT_RIGHT};
+
+
 class Logic
 {
 	int** matrix; //our field

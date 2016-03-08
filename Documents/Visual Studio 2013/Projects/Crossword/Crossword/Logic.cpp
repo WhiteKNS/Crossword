@@ -102,7 +102,7 @@ bool Logic::Game()
 		{
 			Flag[index] = true;
 			counter++;
-			if (arrows.at(index) == 0)
+			if (arrows.at(index) == HOR_DOWN)
 			{
 				for (int i = 0; i < LINES; ++i)
 				{
@@ -118,7 +118,7 @@ bool Logic::Game()
 					}
 				}
 			}
-			else if (arrows.at(index) == 1)
+			else if (arrows.at(index) == VERT_RIGHT)
 			{
 				for (int i = 0; i < LINES; ++i)
 				{
