@@ -9,7 +9,6 @@ DataBase* DataBase::getInstance()
 	{
 		instance = new DataBase();
 	}
-
 	return instance;
 }
 
@@ -71,10 +70,8 @@ DataBase::DataBase()
 				vec.push_back(vector<int>());
 				SaveToField(current_str);
 			}
-			
 		}
 		fin.close();
-
 	}
 
 
@@ -97,10 +94,8 @@ DataBase::DataBase()
 				words.push_back(vector<string>());
 				SaveToString(current_str);
 			}
-
 		}
 		f_str.close();
-	
 	}
 
 
@@ -145,22 +140,16 @@ DataBase::DataBase()
 		{
 			while (!f_str.eof())
 			{
-				
 				getline(f_str, current_str, '\n'); //получаем questions из файла1
-				const char* cur = current_str.c_str();
 				if (isdigit(current_str[0]))
 				{
 					questions.push_back(vector<string>());
 					continue;
 				}
-					
-				
 				questions[questions.size() - 1].push_back(current_str);
 			}
-
 		}
 		f_str.close();
-
 	}
 
 	const vector<int> DataBase::getArrows(const int level)
@@ -198,7 +187,6 @@ DataBase::DataBase()
 				arrows.push_back(vector<int>());
 				SaveToArrow(current_str);
 			}
-
 		}
 		f.close();
 	}
@@ -221,7 +209,6 @@ DataBase::DataBase()
 					for (unsigned int j = start; j < i; j++)
 					{
 						final_str += current_str.at(j);
-
 					}
 				}
 				int number = atoi(final_str.c_str());
@@ -230,9 +217,15 @@ DataBase::DataBase()
 				start = i + 1;
 			}
 		}
-	
 	}
 
+	const void DataBase::setGame()
+	{
+		setField();
+		setWords();
+		setQuestions();
+		setArrows();
+	}
 
 	/*
 	void DataBase::PrintVector()

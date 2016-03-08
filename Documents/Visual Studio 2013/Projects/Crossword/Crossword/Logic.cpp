@@ -9,10 +9,7 @@ Logic::Logic() : counter(0), base(DataBase::getInstance())
 		matrix[i] = new int[COLUMNS];
 	}
 
-	base->setField();
-	base->setWords();
-	base->setQuestions();
-	base->setArrows();
+	base->setGame();
 }
 
 
@@ -35,12 +32,10 @@ Logic::~Logic()
 		delete[] matrix[i];
 
 	delete[] matrix;
-
 }
 
 bool Logic::InitLevel(int level)
 {
-
 	 field = base->getCrossword(level);
 
 	 int k = 0;
@@ -64,9 +59,9 @@ bool Logic::InitLevel(int level)
 	
 	Flag.clear();
 
-	for (unsigned int i = 0; i < words.size(); i++){
+	for (unsigned int i = 0; i < words.size(); i++)
 		Flag.push_back(false);
-	}
+
 	return false;
 }
 
@@ -76,7 +71,8 @@ bool Logic::Game()
 
 	cout << "\n\n" << endl;
 	painter->gotoXY(0, 13);
-	for (unsigned int i = 0; i < words.size(); i++){
+	for (unsigned int i = 0; i < words.size(); i++)
+	{
 		if (!Flag[i]) { cout <<i+1<<" "<< questions.at(i) << "   "  << endl; }  // print questions;
 	}
 	if (words.size() == counter) { cout << "                                        You win!" << endl; Sleep(3000); system("cls"); counter = 0; return true; }
@@ -121,7 +117,6 @@ bool Logic::Game()
 						}
 					}
 				}
-				
 			}
 			else if (arrows.at(index) == 1)
 			{
@@ -139,19 +134,11 @@ bool Logic::Game()
 					}
 				}
 			}
-
-			
-
 		}
 		else { cout << "Wrong!!!" << endl; Sleep(500); system("cls"); painter->Print(); }
 	}
-
 	return false;
-
 }
-
-
-
 
 /*
 void Logic::PrintChar()

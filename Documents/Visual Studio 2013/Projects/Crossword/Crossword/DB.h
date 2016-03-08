@@ -36,6 +36,11 @@ private:
 	void SaveToField(const string current_str);
 	void SaveToQuestions(const string current_str);
 
+	void setField();
+	void setWords();
+	void setQuestions();
+	void setArrows();
+
 public:
 	
 	static DataBase* getInstance();
@@ -46,11 +51,7 @@ public:
 	const vector<string> getQuestions(const int level);
 	const int getNumberOfLevels();
 
-	void setField();
-	void setWords();
-	void setQuestions();
-	void setArrows();
-
+	const void setGame();
 	//void PrintArrows();
 	//void PrintWords();
 	//void PrintQuestions();
